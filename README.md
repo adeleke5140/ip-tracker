@@ -17,5 +17,10 @@ After that, I move onto mapping out components from the design.
 
 It's rough but does the job for me. 
 
-The next step is to create a rough wireframe which will serve as a foundation for me to build out all my components.
+The next step is to create a rough wireframe whichwill serve as a foundation
+for me to build out all my components.
+
 I use the [whimsical app](https://whimsical.com/) for that.
+
+The mobile view wireframe gives me a better grasp of the type of components I need.
+![Mobile Wireframe](https://github.com/adeleke5140/ip-tracker/blob/main/src/assets/design/IP-Tracker.png?raw=true)
