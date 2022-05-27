@@ -12,3 +12,10 @@ This includes:
 5. Initializing new repo
 
 After that, I move onto mapping out components from the design.
+
+![Component Mapping](https://github.com/adeleke5140/ip-tracker/blob/main/src/assets/design/component-mapping.png?raw=true)
+
+It's rough but does the job for me. 
+
+The next step is to create a rough wireframe which will serve as a foundation for me to build out all my components.
+I use the [whimsical app](https://whimsical.com/) for that.
