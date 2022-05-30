@@ -17,6 +17,31 @@ export const Header = styled.header`
 
 export const IpData = styled.section`
   position: relative;
+  background: var(--white);
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: var(--small-border-radius);
+  display: flex;
+  flex-direction: column;
+`
+
+export const IpDataText = styled.div`
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+`
+
+export const IpDataTextTitle = styled.span`
+  color: var(--dark-gray);
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.7em;
+`
+
+export const IpDataTextMain = styled.p`
+  color: var(--very-dark);
+  font-size: 2em;
 `
 
 export const Map = styled.main`
