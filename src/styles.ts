@@ -4,12 +4,13 @@ import bgImage from "./assets/images/pattern-bg.png"
 
 export const AppContainer = styled.div`
   width: 100%;
+  position: relative;
 `
 
 export const Header = styled.header`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 2em;
   align-items: center;
   background-image: url(${bgImage});
   height: 35vh;
@@ -17,31 +18,40 @@ export const Header = styled.header`
 
 export const IpData = styled.section`
   position: relative;
-  background: var(--white);
+  background: var(--pure-white);
   width: 80%;
   margin: 0 auto;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: var(--small-border-radius);
   display: flex;
   flex-direction: column;
+  text-align: center;
+  position: absolute;
+  top: 12em;
+  padding-top: 1.5em;
 `
 
-export const IpDataText = styled.div`
-  margin-bottom: 2em;
+export const IpDataContainer = styled.div`
+  margin-bottom: 1em;
   display: flex;
   flex-direction: column;
 `
 
-export const IpDataTextTitle = styled.span`
+export const IpDataTitle = styled.span`
   color: var(--dark-gray);
   text-transform: uppercase;
   display: inline-block;
-  margin-bottom: 0.7em;
+  margin-bottom: 0.2em;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: -11px;
 `
 
-export const IpDataTextMain = styled.p`
+export const IpDataText = styled.p`
   color: var(--very-dark);
-  font-size: 2em;
+  font-size: 1.1em;
+  font-weight: 900;
 `
 
 export const Map = styled.main`
@@ -54,8 +64,7 @@ export const Title = styled.h1`
   font-size: 1.4rem;
 `
 export const Form = styled.form`
-  /* width: 100%;
-  height: 100%; */
+  margin-top: 0.8em;
 `
 export const FormInput = styled.input`
   width: 250px;
@@ -64,8 +73,12 @@ export const FormInput = styled.input`
   border-bottom-left-radius: var(--small-border-radius);
   border: none;
   font-family: var(--font-family-1);
-  padding-left: 2em;
+  padding-left: 0.8em;
   font-size: 1em;
+  &::placeholder {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+  }
 `
 
 export const FormButton = styled.button`
@@ -75,4 +88,5 @@ export const FormButton = styled.button`
   border-bottom-right-radius: var(--small-border-radius);
   border: none;
   width: 50px;
+  cursor: pointer;
 `
