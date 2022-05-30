@@ -12,6 +12,10 @@ code {
 :root {
   --veryDarkGray: hsl(0, 0%, 17%);
   --darkGray: hsl(0, 0%, 59%);
+  --white: hsl(0, 0%, 92.5%);
+  --very-dark: hsl(0, 0%, 0%);
+
+  --small-border-radius: 12px;
 
   --mobile-view-port: 375px;
   --desktop-view-port: 1440px;
@@ -28,4 +32,8 @@ body {
   font-family: var(--font-family-1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.bg {
+  background-image: url(./assets/images/pattern-bg.png);
 }
