@@ -11,8 +11,9 @@ code {
 
 :root {
   --veryDarkGray: hsl(0, 0%, 17%);
-  --darkGray: hsl(0, 0%, 59%);
+  --dark-gray: hsl(0, 0%, 59%);
   --white: hsl(0, 0%, 92.5%);
+  --pure-white: #fff;
   --very-dark: hsl(0, 0%, 0%);
 
   --small-border-radius: 12px;
