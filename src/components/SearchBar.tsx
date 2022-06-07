@@ -7,30 +7,9 @@ import IpDetails from "../components/IpData"
 
 import axios from "axios"
 
-interface IPData {
-  ip: string
-  isp: string
-  as: As
-  location: Location
-}
-
-interface As {
-  asn: number
-  domain: string
-  name: string
-  route: string
-  type: string
-}
-
-interface Location {
-  country: string
-  region: string
-  timezone: string
-}
-
 const searchForm = () => {
   const [initialIp, setInitialIp] = useState<string>("")
-  const [ipData, setIpData] = useState<IPData | undefined>(undefined)
+  const [data, setData] = useState({})
 
   const getIpData = async () => {
     const apiKey = import.meta.env.VITE_API_KEY
@@ -38,7 +17,7 @@ const searchForm = () => {
       `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}`
     )
     const data = res.data
-    setIpData(data)
+    setData(data)
     const { ip: IpAddress } = data
     setInitialIp(IpAddress)
   }
@@ -55,12 +34,6 @@ const searchForm = () => {
     }
   }, [])
 
-  // function printText(e: ChangeEvent<HTMLInputElement>) {
-  //   searchText(e.target.value)
-  //   console.log(text)
-  //   console.log(e.target.value)
-  // }
-
   return (
     <Form action="">
       <FormInput
@@ -75,7 +48,7 @@ const searchForm = () => {
         <img src={IconArrow} alt="" />
       </FormButton>
       <IpData>
-        <IpDetails data={ipData} />
+        <IpDetails data={data} />
       </IpData>
     </Form>
   )

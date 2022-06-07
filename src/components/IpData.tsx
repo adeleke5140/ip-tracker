@@ -1,27 +1,6 @@
 import { IpDataContainer, IpDataTitle, IpDataText } from "../styles"
 
-interface IPData {
-  ip: string
-  isp: string
-  as: As
-  location: Location
-}
-
-interface As {
-  asn: number
-  domain: string
-  name: string
-  route: string
-  type: string
-}
-
-interface Location {
-  country: string
-  region: string
-  timezone: string
-}
-
-const IpData = (props: IPData | undefined) => {
+const IpData = (props: any) => {
   return (
     <>
       <IpDataContainer>
