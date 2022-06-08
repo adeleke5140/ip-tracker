@@ -11,7 +11,7 @@ const searchForm = () => {
   const [initialIp, setInitialIp] = useState<string>("")
   const [data, setData] = useState({})
 
-  const getIpData = async () => {
+  const getIpData = async (): Promise<void> => {
     const apiKey = import.meta.env.VITE_API_KEY
     const res = await axios.get(
       `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}`
