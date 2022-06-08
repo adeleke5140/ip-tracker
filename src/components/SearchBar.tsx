@@ -16,8 +16,10 @@ const searchForm = () => {
     const res = await axios.get(
       `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}`
     )
+    //set the data of the ip
     const data = res.data
     setData(data)
+    //set the initial IP displayed in the search bar
     const { ip: IpAddress } = data
     setInitialIp(IpAddress)
   }
@@ -25,10 +27,13 @@ const searchForm = () => {
   useEffect(() => {
     let isActive = true
 
+    //app request is made on first render
+    //though I wonder if it should be made when the Ip Address changes
     if (isActive) {
       getIpData()
     }
 
+    //cleanup function to prevent memory leak
     return () => {
       isActive = false
     }
