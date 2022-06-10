@@ -31,13 +31,13 @@ export const IpData = styled.section`
   padding-top: 1.5em;
 `
 
-export const IpDataContainer = styled.div`
+export const DataContainer = styled.div`
   margin-bottom: 1em;
   display: flex;
   flex-direction: column;
 `
 
-export const IpDataTitle = styled.span`
+export const DataTitle = styled.span`
   color: var(--dark-gray);
   text-transform: uppercase;
   display: inline-block;
@@ -48,7 +48,7 @@ export const IpDataTitle = styled.span`
   margin-bottom: -11px;
 `
 
-export const IpDataText = styled.p`
+export const DataText = styled.p`
   color: var(--very-dark);
   font-size: 1.1em;
   font-weight: 900;

@@ -1,4 +1,4 @@
-import { IpDataContainer, IpDataTitle, IpDataText } from "../styles"
+import { DataContainer, DataTitle, DataText } from "../styles"
 
 interface IpData {
   data: dataProps
@@ -27,28 +27,27 @@ interface asProps {
 
 const IpData = (props: IpData) => {
   const { data: IpData } = props
-  console.log(IpData)
   return (
     <>
-      <IpDataContainer>
-        <IpDataTitle>Ip Address</IpDataTitle>
-        <IpDataText>{IpData.ip}</IpDataText>
-      </IpDataContainer>
+      <DataContainer>
+        <DataTitle>Ip Address</DataTitle>
+        <DataText>{IpData?.ip}</DataText>
+      </DataContainer>
 
-      <IpDataContainer>
-        <IpDataTitle>Location</IpDataTitle>
-        <IpDataText>{IpData.location.region}</IpDataText>
-      </IpDataContainer>
+      <DataContainer>
+        <DataTitle>Location</DataTitle>
+        <DataText>{IpData?.location?.region}</DataText>
+      </DataContainer>
 
-      <IpDataContainer>
-        <IpDataTitle> Timezone</IpDataTitle>
-        <IpDataText>UTC {IpData.location.timezone}</IpDataText>
-      </IpDataContainer>
+      <DataContainer>
+        <DataTitle>Timezone</DataTitle>
+        <DataText>UTC {IpData?.location?.timezone}</DataText>
+      </DataContainer>
 
-      <IpDataContainer>
-        <IpDataTitle>Isp</IpDataTitle>
-        <IpDataText>{IpData.isp}</IpDataText>
-      </IpDataContainer>
+      <DataContainer>
+        <DataTitle>Isp</DataTitle>
+        <DataText>{IpData?.isp}</DataText>
+      </DataContainer>
     </>
   )
 }
