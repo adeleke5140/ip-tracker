@@ -54,10 +54,6 @@ export const DataText = styled.p`
   font-weight: 900;
 `
 
-export const Map = styled.main`
-  width: 100%;
-`
-
 export const Title = styled.h1`
   color: var(--white);
   font-weight: var(--fw-medium);
@@ -89,4 +85,9 @@ export const FormButton = styled.button`
   border: none;
   width: 50px;
   cursor: pointer;
+`
+
+export const MapContainer = styled.div`
+  width: 100%;
+  height: 100vh;
 `
