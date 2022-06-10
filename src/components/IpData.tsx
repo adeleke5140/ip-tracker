@@ -1,26 +1,53 @@
 import { IpDataContainer, IpDataTitle, IpDataText } from "../styles"
 
-const IpData = (props: any) => {
+interface IpData {
+  data: dataProps
+}
+
+interface dataProps {
+  ip: string
+  location: LocationProps
+  as: asProps
+  isp: string
+}
+
+interface LocationProps {
+  country: string
+  region: string
+  timezone: string
+}
+
+interface asProps {
+  asn: number
+  domain: string
+  name: string
+  route: string
+  type: string
+}
+
+const IpData = (props: IpData) => {
+  const { data: IpData } = props
+  console.log(IpData)
   return (
     <>
       <IpDataContainer>
         <IpDataTitle>Ip Address</IpDataTitle>
-        <IpDataText>192.212.174.101</IpDataText>
+        <IpDataText>{IpData.ip}</IpDataText>
       </IpDataContainer>
 
       <IpDataContainer>
         <IpDataTitle>Location</IpDataTitle>
-        <IpDataText>Brooklyn, NY 10001</IpDataText>
+        <IpDataText>{IpData.location.region}</IpDataText>
       </IpDataContainer>
 
       <IpDataContainer>
         <IpDataTitle> Timezone</IpDataTitle>
-        <IpDataText>UTC -05:00</IpDataText>
+        <IpDataText>UTC {IpData.location.timezone}</IpDataText>
       </IpDataContainer>
 
       <IpDataContainer>
         <IpDataTitle>Isp</IpDataTitle>
-        <IpDataText>SpaceX Starlink</IpDataText>
+        <IpDataText>{IpData.isp}</IpDataText>
       </IpDataContainer>
     </>
   )
