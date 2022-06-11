@@ -1,6 +1,7 @@
 import Layout from "./components/Layout"
 import HeaderTitle from "./components/HeaderTitle"
 import SearchForm from "./components/SearchBar"
+import Map from "./components/Map"
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Layout>
         <HeaderTitle title="IP Address Tracker" />
         <SearchForm />
+        <Map />
       </Layout>
     </div>
   )
