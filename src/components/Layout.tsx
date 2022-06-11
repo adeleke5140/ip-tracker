@@ -1,4 +1,4 @@
-import { AppContainer, Header, Map } from "../styles"
+import { AppContainer, Header, MapContainer } from "../styles"
 import React, { PropsWithChildren } from "react"
 
 type props = {
@@ -6,14 +6,14 @@ type props = {
 }
 
 const Layout = ({ children }: props) => {
-  const [header, searchForm] = children
+  const [header, searchForm, map] = children
   return (
     <AppContainer>
       <Header>
         {header}
         {searchForm}
       </Header>
-      <Map></Map>
+      <MapContainer>{map}</MapContainer>
     </AppContainer>
   )
 }
