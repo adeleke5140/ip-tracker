@@ -27,6 +27,7 @@ interface asProps {
 
 const IpData = (props: IpData) => {
   const { data: IpData } = props
+
   return (
     <>
       <DataContainer>
