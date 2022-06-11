@@ -8,7 +8,7 @@ function useNavigate() {
 
   const getUserCoordinates = (): void => {
     if (!geoLocationAPI) {
-      setError("GeoLocation API is not available in your browser")
+      console.log("GeoLocation API is not available in your browser")
     } else {
       geoLocationAPI.getCurrentPosition(
         (position) => {
@@ -17,7 +17,7 @@ function useNavigate() {
           setLong(coords.longitude)
         },
         (error) => {
-          setError("Something went wrong with your position!")
+          console.log("Something went wrong with your position!")
         }
       )
     }
