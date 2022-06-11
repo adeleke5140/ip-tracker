@@ -90,4 +90,10 @@ export const FormButton = styled.button`
 export const MapContainer = styled.div`
   width: 100%;
   height: 100vh;
+
+  & > * {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
 `
