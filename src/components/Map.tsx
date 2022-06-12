@@ -6,6 +6,7 @@ const Map = () => {
 
   const position: [number, number] = [lat, long]
 
+  //check to make sure the long and lat aren't zero
   if (position[0] > 0 && position[1] > 0) {
     return (
       <MapContainer
@@ -19,7 +20,9 @@ const Map = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={position}>
-          <Popup>You are here right now!</Popup>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
         </Marker>
       </MapContainer>
     )
